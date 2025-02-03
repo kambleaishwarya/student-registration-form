@@ -1,8 +1,11 @@
 package com.pinnacle.student.model;
 
+import jakarta.validation.constraints.Pattern;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,14 +19,18 @@ public class Student {
 	@Id
 	@GeneratedValue
 	private Long id;
+
 	private String name;
 	private String college;
 	private String address;
 	private String contactNo;
+
 	private String parentContactNo;
+
 	private String course;
 	private Double fees;
 	private Double paidFees;
+
 	private Double balanceFees;
 
 	public Long getId() {
@@ -105,13 +112,5 @@ public class Student {
 	public void setBalanceFees(Double balanceFees) {
 		this.balanceFees = balanceFees;
 	}
-
-	/*
-	 * public Invoice(Long id, String name, String location, Double amount) {
-	 * super(); this.id = id; this.name = name; this.location = location;
-	 * this.amount = amount; } public Invoice() { super();
-	 * 
-	 * }
-	 */
 
 }

@@ -15,9 +15,12 @@ import com.pinnacle.student.service.StudentService;
 @Service
 public class StudentServiceImpl implements StudentService {
 
-	@Autowired
-	private StudentRepository repository;
+	private final StudentRepository repository;
 
+    @Autowired
+    public StudentServiceImpl(StudentRepository repository) {
+        this.repository = repository;
+    }
 	@Override
 	public Student saveStudent(Student student) {
 

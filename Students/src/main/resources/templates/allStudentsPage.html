@@ -76,13 +76,11 @@
 							<td th:text="${ob.paidFees}"></td>
 							<td th:text="${ob.balanceFees}"></td>
 							<td>
-								<!-- Delete Button -->
 								<a th:href="@{/student/delete(id=${ob.id})}"
 									class="btn btn-danger d-flex align-items-center">
 									<i class="fa fa-trash mr-2"></i> Delete
 								</a>
 								|
-								<!-- Edit Button -->
 								<a th:href="@{/student/edit(id=${ob.id})}"
 									class="btn btn-warning d-flex align-items-center">
 									<i class="fa fa-pencil mr-2"></i> Edit
